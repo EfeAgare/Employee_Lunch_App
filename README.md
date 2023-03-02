@@ -1,24 +1,77 @@
-# README
+# Mystery lunch app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- At the beginning of each month, every employee is randomly selected to have lunch with another employee of a different department.
 
-Things you may want to cover:
+- Employees management
+  • Departments: operations, sales, marketing, risk, management, finance, HR, development and data
+  • The employee deletion should only disable the employee for future mystery lunches
+  • When an employee is created, he/she should join an existing mystery pair (2 people mystery lunch)
+  • When an employee is deleted:
+      o This employee had one mystery partner: the remaining employee should join
+      another existing mystery pair (3 people mystery lunch)
+      o This employee had two mystery partners: nothing should be done
 
-* Ruby version
+- Mystery partners selection
+  • The selection should be automatically performed on 1st day of each month
+  • Two employees should not be selected to be partners if they were partners in the last 3 months
+  • When the number of employees is odd, the remaining employee should join an existing mystery pair (2 people mystery lunch). The department of these three employees should be different.
 
-* System dependencies
+## Technologies
+  * Ruby
+  * Git
+  * Rspec
+  * Sidekiq
+  * redis-server
+  * Postgres
 
-* Configuration
+## Setup
+- Ensure you have [ruby](https://rvm.io/rvm/install) installed on your device and also [redis](https://phoenixnap.com/kb/install-redis-on-mac) for background processes
 
-* Database creation
+  ```
+   Ruby = 3.0.0
+  ```
 
-* Database initialization
+  Clone this repository and cd into the clone specific folder and run the following command 
+  accordingly
 
-* How to run the test suite
+  ```
+   bundle install
+  ```
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```
+   rails db:create 
+  ```
 
-* Deployment instructions
+  ```
+   rails db:migrate
+   rails db:seed
+  ```
 
-* ...
+  After to run server
+
+  ```
+  rails s
+  ```
+
+  ```
+  redis-server
+  ```
+
+  ```
+   sidekiq
+  ```
+
+## Test 
+To run all test
+```
+bundle exec rspec 
+```
+
+and to run a specific test 
+ ```
+ rspec 'relative path to file'
+ ```
+
+### What to Add:
+
+- UI
