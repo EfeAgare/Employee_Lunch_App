@@ -1,4 +1,5 @@
 ![example workflow](https://github.com/EfeAgare/Employee_Lunch_App/actions/workflows/test.yml/badge.svg)
+
 # Mystery lunch app
 
 At the beginning of each month, every employee is randomly selected to have lunch with another employee of a different department.
