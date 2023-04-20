@@ -2,6 +2,9 @@
 
 # Mystery lunch app
 
+
+Mystery lunch is a social event where employees are randomly paired up for lunch, with the intention of fostering communication and collaboration across departments.
+
 At the beginning of each month, every employee is randomly selected to have lunch with another employee of a different department.
 
 1. Employees management
